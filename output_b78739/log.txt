@@ -1,0 +1,127 @@
+--- 加载 LightGBM 模型 ---
+成功加载模型: output_b78739/saved_lgbm_models/lgbm_model_trees_12.txt
+模型需要 242 个特征。
+
+--- 开始分批预测 (共 10 批) ---
+SQL 查询: 
+    SELECT *
+    FROM user_pay_sample_feature_join_eval
+    WHERE brand_id='b78739' AND (ds='20130923') AND (rnd >= 0.0 AND rnd < 0.1);
+    
+
+批次 1/10 (rnd范围: [0.00, <0.10))
+批次 1 数据加载完成，形状: (296172, 248)
+批次 1 处理完成，耗时: 211.78 秒
+SQL 查询: 
+    SELECT *
+    FROM user_pay_sample_feature_join_eval
+    WHERE brand_id='b78739' AND (ds='20130923') AND (rnd >= 0.1 AND rnd < 0.2);
+    
+
+批次 2/10 (rnd范围: [0.10, <0.20))
+批次 2 数据加载完成，形状: (296964, 248)
+批次 2 处理完成，耗时: 216.20 秒
+SQL 查询: 
+    SELECT *
+    FROM user_pay_sample_feature_join_eval
+    WHERE brand_id='b78739' AND (ds='20130923') AND (rnd >= 0.2 AND rnd < 0.3);
+    
+
+批次 3/10 (rnd范围: [0.20, <0.30))
+批次 3 数据加载完成，形状: (296843, 248)
+批次 3 处理完成，耗时: 214.19 秒
+SQL 查询: 
+    SELECT *
+    FROM user_pay_sample_feature_join_eval
+    WHERE brand_id='b78739' AND (ds='20130923') AND (rnd >= 0.3 AND rnd < 0.4);
+    
+
+批次 4/10 (rnd范围: [0.30, <0.40))
+批次 4 数据加载完成，形状: (297975, 248)
+批次 4 处理完成，耗时: 212.17 秒
+SQL 查询: 
+    SELECT *
+    FROM user_pay_sample_feature_join_eval
+    WHERE brand_id='b78739' AND (ds='20130923') AND (rnd >= 0.4 AND rnd < 0.5);
+    
+
+批次 5/10 (rnd范围: [0.40, <0.50))
+批次 5 数据加载完成，形状: (297438, 248)
+批次 5 处理完成，耗时: 213.93 秒
+SQL 查询: 
+    SELECT *
+    FROM user_pay_sample_feature_join_eval
+    WHERE brand_id='b78739' AND (ds='20130923') AND (rnd >= 0.5 AND rnd < 0.6);
+    
+
+批次 6/10 (rnd范围: [0.50, <0.60))
+批次 6 数据加载完成，形状: (297158, 248)
+批次 6 处理完成，耗时: 214.59 秒
+SQL 查询: 
+    SELECT *
+    FROM user_pay_sample_feature_join_eval
+    WHERE brand_id='b78739' AND (ds='20130923') AND (rnd >= 0.6 AND rnd < 0.7);
+    
+
+批次 7/10 (rnd范围: [0.60, <0.70))
+批次 7 数据加载完成，形状: (297809, 248)
+批次 7 处理完成，耗时: 293.03 秒
+SQL 查询: 
+    SELECT *
+    FROM user_pay_sample_feature_join_eval
+    WHERE brand_id='b78739' AND (ds='20130923') AND (rnd >= 0.7 AND rnd < 0.8);
+    
+
+批次 8/10 (rnd范围: [0.70, <0.80))
+批次 8 数据加载完成，形状: (297294, 248)
+批次 8 处理完成，耗时: 217.67 秒
+SQL 查询: 
+    SELECT *
+    FROM user_pay_sample_feature_join_eval
+    WHERE brand_id='b78739' AND (ds='20130923') AND (rnd >= 0.8 AND rnd < 0.9);
+    
+
+批次 9/10 (rnd范围: [0.80, <0.90))
+批次 9 数据加载完成，形状: (297569, 248)
+批次 9 处理完成，耗时: 211.37 秒
+SQL 查询: 
+    SELECT *
+    FROM user_pay_sample_feature_join_eval
+    WHERE brand_id='b78739' AND (ds='20130923') AND (rnd >= 0.9 AND rnd <= 1.0);
+    
+
+批次 10/10 (rnd范围: [0.90, <=1.00))
+批次 10 数据加载完成，形状: (296560, 248)
+批次 10 处理完成，耗时: 229.44 秒
+
+--- 所有批次预测完成 ---
+总处理行数: 2971782
+总预测耗时: 2234.35 秒
+
+--- 合并所有预测结果 ---
+合并后总结果数: 2971782
+测试数据集中总的正样本 (label=1) 数量: 346
+
+--- 计算 Top-K Recall ---
+按预测分数排序...
+排序完成。
+Top 1000:
+  - 包含的正样本数: 33
+  - Recall (占总正样本比例): 0.095376
+Top 3000:
+  - 包含的正样本数: 96
+  - Recall (占总正样本比例): 0.277457
+Top 5000:
+  - 包含的正样本数: 137
+  - Recall (占总正样本比例): 0.395954
+Top 10000:
+  - 包含的正样本数: 170
+  - Recall (占总正样本比例): 0.491329
+Top 50000:
+  - 包含的正样本数: 209
+  - Recall (占总正样本比例): 0.604046
+
+--- 计算完成 ---
+结果合并与计算耗时: 0.57 秒
+
+Recall 结果已保存到: output_b78739/prediction_recall_report.csv

@@ -9,8 +9,12 @@ import time # 用于计时
 # ODPS 连接信息 (假设 key.py 在同一目录或 PYTHONPATH 中)
 import key
 # 品牌和模型信息
-brand_id = 'b56508'        # 替换为你的品牌 ID
-best_num_trees = 102      # 替换为你选择的最佳树数量
+# b47686:韩都衣舍 b56508:三星手机 b62063:诺基亚 b78739:LILY
+brand_ids=['b47686','b56508','b62063','b78739']
+ind =3
+best_num_trees = [228,30,30,12]
+brand_id = brand_ids[ind]      # 替换为你的品牌 ID
+best_num_trees =best_num_trees[ind]       # 替换为你选择的最佳树数量
 brand_output_dir = f'output_{brand_id}'
 model_save_dir = os.path.join(brand_output_dir, 'saved_lgbm_models')
 model_file_path = os.path.join(model_save_dir, f'lgbm_model_trees_{best_num_trees}.txt')
